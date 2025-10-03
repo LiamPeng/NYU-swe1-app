@@ -64,3 +64,16 @@ class DetailView(generic.DetailView):
 class ResultsView(generic.DetailView):
     model = Question
     template_name = "polls/results.html"
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        question = self.object
+        context["total_votes"] = sum(c.votes for c in question.choice_set.all())
+        return context
+# def results(request, question_id):
+#     question = get_object_or_404(Question, pk=question_id)
+#     total_votes = sum(c.votes for c in question.choice_set.all())
+#     return render(request, "polls/results.html", {
+#         "question": question,
+#         "total_votes": total_votes,
+#     })

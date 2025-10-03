@@ -27,7 +27,7 @@ DEBUG = True
 
 # AWS EB
 # ALLOWED_HOSTS = ['.elasticbeanstalk.com', '127.0.0.1', 'localhost']
-ALLOWED_HOSTS = ['django-env.eba-pc5m3awi.us-west-2.elasticbeanstalk.com']
+ALLOWED_HOSTS = ['127.0.0.1', 'django-env.eba-pc5m3awi.us-west-2.elasticbeanstalk.com']
 
 # Application definition
 
