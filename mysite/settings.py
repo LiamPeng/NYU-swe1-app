@@ -30,6 +30,7 @@ SECRET_KEY = os.getenv("DJANGO_SECRET_KEY")
 # ⚠️ fallback
 if not SECRET_KEY:
     from django.core.management.utils import get_random_secret_key
+
     SECRET_KEY = get_random_secret_key()
 
 DEBUG = os.getenv("DEBUG", "False").lower() == "true"
@@ -40,12 +41,17 @@ DEBUG = True
 
 # AWS EB
 # ALLOWED_HOSTS = ['.elasticbeanstalk.com', '127.0.0.1', 'localhost']
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', os.environ.get('HOSTNAME'), '.elasticbeanstalk.com']
+ALLOWED_HOSTS = [
+    "localhost",
+    "127.0.0.1",
+    os.environ.get("HOSTNAME"),
+    ".elasticbeanstalk.com",
+]
 # Application definition
 
 INSTALLED_APPS = [
-    'admin_interface',
-    'colorfield',  # django-admin-interface
+    "admin_interface",
+    "colorfield",  # django-admin-interface
     "polls.apps.PollsConfig",
     "django.contrib.admin",
     "django.contrib.auth",
@@ -56,7 +62,7 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
-    'whitenoise.middleware.WhiteNoiseMiddleware',
+    "whitenoise.middleware.WhiteNoiseMiddleware",
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
@@ -134,5 +140,6 @@ STATIC_URL = "static/"
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 import os
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-STATIC_URL = '/static/'
+
+STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
+STATIC_URL = "/static/"
