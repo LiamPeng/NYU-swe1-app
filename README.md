@@ -8,7 +8,7 @@ This is the personal assignment for **NYU Fall 2025 – CS-GY 6063-1-INET**:
 
 ![Index](docs/app_preview.png)
 
-This repository contains a classic **Polls** application with a clean UI (Bootstrap), end-to-end CRUD, and deployment scripts for **AWS Elastic Beanstalk**.
+The repository contains a classic **Polls** application with a clean UI (Bootstrap), end-to-end CRUDs, and deployment scripts for **AWS Elastic Beanstalk**.
 
 ---
 
