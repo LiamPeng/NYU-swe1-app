@@ -25,6 +25,6 @@ deploy:
   access_key_id: $AWS_ACCESS_KEY_ID
   secret_access_key: $AWS_SECRET_ACCESS_KEY
   on:
-    repo: NYU-swe1-app
+    repo: LiamPeng/NYU-swe1-app
     branch: main
   skip_cleanup: true
