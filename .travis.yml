@@ -26,4 +26,4 @@ deploy:
   secret_access_key: $AWS_SECRET_ACCESS_KEY
   on:
     branch: main
-  version_label: "travis-${TRAVIS_COMMIT}"
+  version: "travis-${TRAVIS_COMMIT}"
