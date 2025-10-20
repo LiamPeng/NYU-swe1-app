@@ -1,19 +1,13 @@
 [run]
-branch = True
-source =
-    mysite
-    polls
+source = .
 omit =
     */migrations/*
+    */__init__.py
     manage.py
-    */tests/*
-    */venv/*
-    */.venv/*
+    */settings.py
+    */wsgi.py
 
 [report]
 show_missing = True
 skip_covered = True
-exclude_lines =
-    pragma: no cover
-    if __name__ == .__main__.:
-    if settings.DEBUG
+precision = 2
