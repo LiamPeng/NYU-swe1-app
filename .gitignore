@@ -32,3 +32,9 @@ lib/
 lib64/
 parts/
 sdist/
+
+# Coverage and test reports
+htmlcov/
+.coverage
+.coverage.*
+.cache/
