@@ -27,3 +27,4 @@ deploy:
   on:
     branch: main
   version: "travis-${TRAVIS_COMMIT}"
+  skip_cleanup: true
