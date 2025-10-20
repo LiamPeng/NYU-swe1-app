@@ -5,16 +5,13 @@ python:
 install:
   - pip install -r requirements.txt
 
-before_script:
+script:
   - black --check .
   - flake8 .
-
-script:
   - coverage run manage.py test
 
 after_success:
-  - coverage report -m
-  - COVERALLS_SERVICE_NAME=travis-ci COVERALLS_GIT_BRANCH=$TRAVIS_BRANCH coveralls
+  - coveralls
 
 deploy:
   provider: elasticbeanstalk
